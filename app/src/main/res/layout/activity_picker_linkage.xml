@@ -36,12 +36,6 @@
             android:onClick="onLikeAntFortune"
             android:text="仿蚂蚁财富定投周期选择"/>
 
-        <com.github.gzuliyujiang.wheelpicker.widget.CarPlateWheelLayout
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            app:wheel_thirdVisible="false" />
-
     </LinearLayout>
 
 </ScrollView>

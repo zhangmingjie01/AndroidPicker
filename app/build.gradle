@@ -18,13 +18,13 @@ dependencies {
     implementation androidxLibrary.appcompat
     implementation library.material
     implementation project(':Common')
-    implementation project(':WheelView')
-    implementation project(':WheelPicker')
-    implementation project(':AddressPicker')
-    implementation project(':ColorPicker')
-    implementation project(':FilePicker')
+//    implementation project(':WheelView')
+//    implementation project(':WheelPicker')
+//    implementation project(':AddressPicker')
+//    implementation project(':ColorPicker')
+//    implementation project(':FilePicker')
     implementation project(':CalendarPicker')
-    implementation project(':ImagePicker')
+//    implementation project(':ImagePicker')
     debugRuntimeOnly library.orhanobut_logger
     debugRuntimeOnly library.xcrash
     compileOnly library.xcrash

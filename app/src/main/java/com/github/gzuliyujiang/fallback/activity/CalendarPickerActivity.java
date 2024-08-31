@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.activity.ComponentActivity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -41,7 +42,7 @@ import java.util.Locale;
  * @author 贵州山野羡民（1032694760@qq.com）
  * @since 2019/6/23
  */
-public class CalendarPickerActivity extends BackAbleActivity {
+public class CalendarPickerActivity extends ComponentActivity {
     private long startTimeInMillis, endTimeInMillis, singleTimeInMillis;
 
     @Override

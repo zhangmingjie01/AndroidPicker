@@ -37,6 +37,7 @@ public class ColorScheme implements Serializable {
     private int dayNormalBackgroundColor = Color.TRANSPARENT;
     private int dayInvalidBackgroundColor = Color.TRANSPARENT;
     private int daySelectBackgroundColor = 0xFFE75051;
+    private int daySelectRangeColor = 0xFFE75051;
 
     public ColorScheme weekTextColor(@ColorInt int color) {
         this.weekTextColor = color;
@@ -166,6 +167,16 @@ public class ColorScheme implements Serializable {
     @ColorInt
     public int daySelectBackgroundColor() {
         return daySelectBackgroundColor;
+    }
+
+    public ColorScheme daySelectRangeColor(@ColorInt int color) {
+        this.daySelectRangeColor = color;
+        return this;
+    }
+
+    @ColorInt
+    public int daySelectRangeColor() {
+        return daySelectRangeColor;
     }
 
 }

@@ -85,8 +85,11 @@ public class CalendarPickerActivity extends ComponentActivity {
         }
         picker.setSelectedDate(startTimeInMillis, endTimeInMillis);
         picker.setColorScheme(new ColorScheme()
-                .daySelectBackgroundColor(0xFF00CC00)
-                .dayStressTextColor(0xFF00AA00));
+                .daySelectBackgroundColor(0xFF0046B4)
+                .daySelectRangeColor(0x140046B4)
+                .dayStressTextColor(0xFF121A26)
+                .daySelectTextColor(0xFF121A26));
+        picker.setIntervalNotes("开始","结束");
         picker.setOnRangeDatePickListener(new OnRangeDatePickListener() {
             @Override
             public void onRangeDatePicked(@NonNull Date startDate, @NonNull Date endDate) {
@@ -117,6 +120,7 @@ public class CalendarPickerActivity extends ComponentActivity {
             endTimeInMillis = currentDate.getTime() + 3 * android.text.format.DateUtils.DAY_IN_MILLIS;
         }
         picker.setSelectedDate(startTimeInMillis, endTimeInMillis);
+
         picker.setOnRangeDatePickListener(new OnRangeDatePickListener() {
             @Override
             public void onRangeDatePicked(@NonNull Date startDate, @NonNull Date endDate) {

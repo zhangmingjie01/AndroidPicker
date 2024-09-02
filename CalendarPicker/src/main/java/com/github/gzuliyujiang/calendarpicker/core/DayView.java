@@ -24,7 +24,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
+
+import com.github.gzuliyujiang.calendarpicker.R;
 
 /**
  * 日期控件
@@ -65,13 +68,13 @@ public final class DayView extends LinearLayout {
         setPadding(0, padding, 0, padding);
         tvDay = new TextView(context);
         tvDay.setGravity(Gravity.CENTER);
-        tvDay.setTextSize(15);
+        tvDay.setTextSize(14);
         addView(tvDay, new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
         tvDesc = new TextView(context);
         tvDesc.setGravity(Gravity.CENTER);
-        tvDesc.setTextSize(12);
+        tvDesc.setTextSize(9);
         addView(tvDesc, new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -138,17 +141,18 @@ public final class DayView extends LinearLayout {
                 break;
             //范围内
             case DayStatus.RANGE:
-                setBackgroundColor(ColorUtils.setAlphaComponent(scheme.daySelectBackgroundColor(), 200));
+                setBackgroundColor(scheme.daySelectRangeColor());
                 setEnabled(true);
                 break;
             //左边界、单选、右边界
             case DayStatus.BOUND_L:
             case DayStatus.BOUND_M:
             case DayStatus.BOUND_R:
-                tvDay.setTextColor(scheme.daySelectTextColor());
-                tvDesc.setTextColor(scheme.daySelectTextColor());
+                tvDay.setTextColor(0xFFFFFFFF);
+                tvDesc.setTextColor(0xFFFFFFFF);
                 tvDesc.setText(entity.note());
-                setBackgroundColor(scheme.daySelectBackgroundColor());
+                //setBackgroundColor(scheme.daySelectBackgroundColor());
+                setBackground(ContextCompat.getDrawable(getContext(), R.drawable.shape_corner_3));
                 break;
             default:
                 break;
